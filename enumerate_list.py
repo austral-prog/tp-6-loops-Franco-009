@@ -1,12 +1,22 @@
-def power(base, exp):
-    acomulador = 1
-    for i in range(1, exp+1):
-            acomulador = acomulador * base
-    return acomulador
+def enumerate_list(lst):
+    resultado = []
+    indice = 0
+    for palabra in lst:
+        if palabra != "":
+            resultado.append(f"{indice}. {palabra}")
+            indice += 1
+
+    return resultado
 
 
-def sum_of_powers(base, max_exp):
-    acomulador = 0
-    for i in range(max_exp + 1):
-        acomulador += power(base, i)
-    return acomulador
+def enumerate_backwards(lst):
+    resultado = []
+    indice = 0
+
+    for palabra in lst:
+        if palabra != "":
+            palabra_invertida = palabra[::-1]
+            resultado.append(f"{indice}. {palabra_invertida}")
+            indice += 1
+
+    return resultado
